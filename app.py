@@ -30,7 +30,6 @@ while True:
 
         currentIMG = np.reshape(currentIMG, (1, 50, 50, 1))
         pred = model.predict(currentIMG)
-        print(pred.shape)
         pred = np.argmax(pred[0])
 
         cv2.putText(frame, categories[pred], (200, 200),
